@@ -13,7 +13,7 @@ for i,item in pairs(boxing.items) do
 	data:extend({
 		{
 			type = "item",
-			name = "wooden-box-of-"..item.name,
+			name = "wooden-box-of-" .. item.name,
 			localised_name = {
 				"item-name.*-box-of-*",
 				{"item-name." .. "wooden-box"},
@@ -21,13 +21,13 @@ for i,item in pairs(boxing.items) do
 			},
 			flags = {"goes-to-main-inventory"},
 			icon = "__boxing-2__/graphics/icons/box-of/wooden/" .. mod .. "/" .. icon,
-			subgroup = "boxing-wooden",
+			subgroup = "boxing-wooden-" .. item.subgroup,
 			order = item.order,
 			stack_size = 5,
 		},
 		{
 			type = "item",
-			name = "steel-box-of-"..item.name,
+			name = "steel-box-of-" .. item.name,
 			localised_name = {
 				"item-name.*-box-of-*",
 				{"item-name." .. "steel-box"},
@@ -35,7 +35,7 @@ for i,item in pairs(boxing.items) do
 			},
 			flags = {"goes-to-main-inventory"},
 			icon = "__boxing-2__/graphics/icons/box-of/steel/" .. mod .. "/" .. icon,
-			subgroup = "boxing-steel",
+			subgroup = "boxing-steel-" .. item.subgroup,
 			order = item.order,
 			stack_size = 10,
 		},
@@ -52,7 +52,7 @@ for i,item in pairs(boxing.items) do
 				},
 				flags = {"goes-to-main-inventory"},
 				icon = "__boxing-2__/graphics/icons/box-of/tungsten/" .. mod .. "/" .. icon,
-				subgroup = "boxing-tungsten",
+				subgroup = "boxing-tungsten-" .. item.subgroup,
 				order = item.order,
 				stack_size = 20,
 			},

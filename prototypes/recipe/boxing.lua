@@ -18,7 +18,7 @@ for i,item in pairs(boxing.items) do
 			icon = "__boxing-2__/graphics/icons/box/wooden/" .. mod .. "/" .. icon,
 			energy_required = 2,
 			category = "boxing-wooden",
-			subgroup = "boxing-wooden",
+			subgroup = "boxing-wooden-" .. item.subgroup,
 			order = item.order,
 			ingredients = {
 				{item.name, item.stack_size},
@@ -34,7 +34,7 @@ for i,item in pairs(boxing.items) do
 			icon = "__boxing-2__/graphics/icons/unbox/wooden/" .. mod .. "/" .. icon,
 			energy_required = 2,
 			category = "boxing-wooden",
-			subgroup = "unboxing-wooden",
+			subgroup = "unboxing-wooden-" .. item.subgroup,
 			order = item.order,
 			ingredients = {
 				{"wooden-box-of-" .. item.name, 1},
@@ -52,7 +52,7 @@ for i,item in pairs(boxing.items) do
 			icon = "__boxing-2__/graphics/icons/box/steel/" .. mod .. "/" .. icon,
 			energy_required = 5,
 			category = "boxing-steel",
-			subgroup = "boxing-steel",
+			subgroup = "boxing-steel-" .. item.subgroup,
 			order = item.order,
 			ingredients = {
 				{item.name, item.stack_size},
@@ -68,7 +68,7 @@ for i,item in pairs(boxing.items) do
 			icon = "__boxing-2__/graphics/icons/unbox/steel/" .. mod .. "/" .. icon,
 			energy_required = 5,
 			category = "boxing-steel",
-			subgroup = "unboxing-steel",
+			subgroup = "unboxing-steel-" .. item.subgroup,
 			order = item.order,
 			ingredients = {
 				{"steel-box-of-" .. item.name, 1},
@@ -105,7 +105,7 @@ for i,item in pairs(boxing.items) do
 				icon = "__boxing-2__/graphics/icons/box/tungsten/" .. mod .. "/" .. icon,
 				energy_required = 10,
 				category = "boxing-tungsten",
-				subgroup = "boxing-tungsten",
+				subgroup = "boxing-tungsten-" .. item.subgroup,
 				order = item.order,
 				ingredients = {
 					{item.name, item.stack_size},
@@ -121,7 +121,7 @@ for i,item in pairs(boxing.items) do
 				icon = "__boxing-2__/graphics/icons/unbox/tungsten/" .. mod .. "/" .. icon,
 				energy_required = 10,
 				category = "boxing-tungsten",
-				subgroup = "unboxing-tungsten",
+				subgroup = "unboxing-tungsten-" .. item.subgroup,
 				order = item.order,
 				ingredients = {
 					{"tungsten-box-of-" .. item.name, 1},
