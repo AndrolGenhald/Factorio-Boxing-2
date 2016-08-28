@@ -60,55 +60,57 @@ end
 --]]
 
 for subgroupName,t in pairs(boxing.subgroups) do
-	local groupName = data.raw["item-subgroup"][subgroupName].group;
-	local groupOrder = data.raw["item-group"][groupName].order;
-	local subgroupOrder = data.raw["item-subgroup"][subgroupName].order;
-	data:extend({
-		{
-			type = "item-subgroup",
-			name = "boxing-wooden-" .. subgroupName,
-			--group = "box-wooden",
-			group = "boxing",
-			order = "b[boxing]-a[wooden]" .. groupOrder .. subgroupOrder,
-		},
-		{
-			type = "item-subgroup",
-			name = "unboxing-wooden-" .. subgroupName,
-			--group = "unbox-wooden",
-			group = "boxing",
-			order = "c[unboxing]-a[wooden]" .. groupOrder .. subgroupOrder,
-		},
-		{
-			type = "item-subgroup",
-			name = "boxing-steel-" .. subgroupName,
-			--group = "box-steel",
-			group = "boxing",
-			order = "b[boxing]-b[steel]" .. groupOrder .. subgroupOrder,
-		},
-		{
-			type = "item-subgroup",
-			name = "unboxing-steel-" .. subgroupName,
-			--group = "unbox-steel",
-			group = "boxing",
-			order = "c[unboxing]-b[steel]" .. groupOrder .. subgroupOrder,
-		},
-	});
-	if boxing.tungsten then
+	if data.raw["item-subgroup"][subgroupName] then
+		local groupName = data.raw["item-subgroup"][subgroupName].group;
+		local groupOrder = data.raw["item-group"][groupName].order;
+		local subgroupOrder = data.raw["item-subgroup"][subgroupName].order;
 		data:extend({
 			{
 				type = "item-subgroup",
-				name = "boxing-tungsten-" .. subgroupName,
-				--group = "box-tungsten",
+				name = "boxing-wooden-" .. subgroupName,
+				--group = "box-wooden",
 				group = "boxing",
-				order = "b[boxing]-c[tungsten]" .. groupOrder .. subgroupOrder,
+				order = "b[boxing]-a[wooden]" .. groupOrder .. subgroupOrder,
 			},
 			{
 				type = "item-subgroup",
-				name = "unboxing-tungsten-" .. subgroupName,
-				--group = "unbox-tungsten",
+				name = "unboxing-wooden-" .. subgroupName,
+				--group = "unbox-wooden",
 				group = "boxing",
-				order = "c[unboxing]-c[tungsten]" .. groupOrder .. subgroupOrder,
+				order = "c[unboxing]-a[wooden]" .. groupOrder .. subgroupOrder,
+			},
+			{
+				type = "item-subgroup",
+				name = "boxing-steel-" .. subgroupName,
+				--group = "box-steel",
+				group = "boxing",
+				order = "b[boxing]-b[steel]" .. groupOrder .. subgroupOrder,
+			},
+			{
+				type = "item-subgroup",
+				name = "unboxing-steel-" .. subgroupName,
+				--group = "unbox-steel",
+				group = "boxing",
+				order = "c[unboxing]-b[steel]" .. groupOrder .. subgroupOrder,
 			},
 		});
+		if boxing.tungsten then
+			data:extend({
+				{
+					type = "item-subgroup",
+					name = "boxing-tungsten-" .. subgroupName,
+					--group = "box-tungsten",
+					group = "boxing",
+					order = "b[boxing]-c[tungsten]" .. groupOrder .. subgroupOrder,
+				},
+				{
+					type = "item-subgroup",
+					name = "unboxing-tungsten-" .. subgroupName,
+					--group = "unbox-tungsten",
+					group = "boxing",
+					order = "c[unboxing]-c[tungsten]" .. groupOrder .. subgroupOrder,
+				},
+			});
+		end
 	end
 end
