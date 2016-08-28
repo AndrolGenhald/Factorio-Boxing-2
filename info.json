@@ -4,7 +4,7 @@
 	"title": "Boxing 2",
 	"author": "AndrolGenhald",
 	"description": "Pack items into boxes to store more of them.",
-	"factorio_version": "0.13",
+	"factorio_version": "0.14",
 	"dependencies": [
 		"base >= 0.13.0",
 		"? bobassembly >= 0.13.0",
