@@ -1,5 +1,7 @@
 boxing = {};
-boxing.subgroups = {
+
+--subgroups to allow boxing for
+boxing.itemSubgroups = {
 	["terrain"] = true,
 	["raw-resource"] = true,
 	["raw-material"] = true,
@@ -27,9 +29,18 @@ boxing.subgroups = {
 	["bob-robot-parts"] = true,
 };
 
-boxing.items = {
-	["rail-planner"] = true,
+--specific items to allow boxing for
+boxing.itemNames = {
+	["rail"] = true,
 };
+
+--boxing subgroups to create (for sorting items)
+boxing.subgroups = {
+	["transport"] = true,
+};
+for subgroup, i in pairs(boxing.itemSubgroups) do
+	boxing.subgroups[subgroup] = true;
+end
 
 boxing.woodenUnlocks = {
 	{
