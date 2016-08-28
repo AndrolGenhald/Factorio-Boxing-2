@@ -1,5 +1,6 @@
 boxing = {};
 boxing.subgroups = {
+	["terrain"] = true,
 	["raw-resource"] = true,
 	["raw-material"] = true,
 	["intermediate-product"] = true,
@@ -25,6 +26,11 @@ boxing.subgroups = {
 	["bob-gems-polished"] = true,
 	["bob-robot-parts"] = true,
 };
+
+boxing.items = {
+	["rail-planner"] = true,
+};
+
 boxing.woodenUnlocks = {
 	{
 		type = "unlock-recipe",

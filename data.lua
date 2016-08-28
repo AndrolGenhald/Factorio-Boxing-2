@@ -11,7 +11,7 @@ boxing.tungsten = data.raw.tool["science-pack-gold"]
 ;
 
 for i,item in pairs(data.raw.item) do
-	if boxing.subgroups[item.subgroup] then
+	if boxing.subgroups[item.subgroup] or boxing.items[item.name] then
 		table.insert(boxing.items, item);
 	end
 end
