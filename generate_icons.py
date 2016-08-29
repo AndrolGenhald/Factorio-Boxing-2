@@ -115,6 +115,7 @@ for mod, icons in iconLists.items():
 	luaFile.close()
 
 iconListFiles = glob.glob('icon-lists/*.lua')
+iconListFiles.sort()
 iconListList = open('icon-lists.lua', 'w')
 iconListList.write('boxing["icon-lists"] = {\n')
 for listFile in iconListFiles:
