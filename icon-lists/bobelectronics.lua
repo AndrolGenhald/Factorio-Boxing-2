@@ -1,4 +1,4 @@
-boxing.mods["bobelectronics"] = {
+boxing.icons["bobelectronics"] = {
 	["graphics/icons/basic-circuit-board.png"] = true,
 	["graphics/icons/basic-electronic-circuit-board.png"] = true,
 	["graphics/icons/basic-electronic-components.png"] = true,

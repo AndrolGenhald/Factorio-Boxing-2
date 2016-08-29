@@ -1,4 +1,4 @@
-boxing.mods["bobores"] = {
+boxing.icons["bobores"] = {
 	["graphics/icons/bauxite-ore.png"] = true,
 	["graphics/icons/cobalt-ore.png"] = true,
 	["graphics/icons/gold-ore.png"] = true,

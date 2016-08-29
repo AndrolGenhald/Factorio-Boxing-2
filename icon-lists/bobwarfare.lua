@@ -1,4 +1,4 @@
-boxing.mods["bobwarfare"] = {
+boxing.icons["bobwarfare"] = {
 	["graphics/icons/gun-cotton.png"] = true,
 	["graphics/icons/petroleum-jelly.png"] = true,
 	["graphics/icons/robot-brain-combat-2.png"] = true,

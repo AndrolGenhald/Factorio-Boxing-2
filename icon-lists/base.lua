@@ -1,4 +1,4 @@
-boxing.mods["base"] = {
+boxing.icons["base"] = {
 	["graphics/icons/advanced-circuit.png"] = true,
 	["graphics/icons/alien-artifact.png"] = true,
 	["graphics/icons/battery.png"] = true,

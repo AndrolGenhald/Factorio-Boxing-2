@@ -1,4 +1,4 @@
-boxing.mods["bobenemies"] = {
+boxing.icons["bobenemies"] = {
 	["graphics/icons/alien-artifact-blue.png"] = true,
 	["graphics/icons/alien-artifact-green.png"] = true,
 	["graphics/icons/alien-artifact-orange.png"] = true,

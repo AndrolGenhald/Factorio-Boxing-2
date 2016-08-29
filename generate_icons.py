@@ -108,8 +108,16 @@ for mod, icons in iconLists.items():
 	iconFile.write(repr(icons))
 
 	luaFile = open(os.path.join('icon-lists', mod + '.lua'), 'w')
-	luaFile.write('boxing.mods["' + mod + '"] = {\n')
+	luaFile.write('boxing.icons["' + mod + '"] = {\n')
 	for icon in icons:
 		luaFile.write('\t["' + icon + '"] = true,\n')
 	luaFile.write('};\n')
 	luaFile.close()
+
+iconListFiles = glob.glob('icon-lists/*.lua')
+iconListList = open('icon-lists.lua', 'w')
+iconListList.write('boxing["icon-lists"] = {\n')
+for listFile in iconListFiles:
+	iconListList.write('\t"' + listFile + '",\n')
+iconListList.write('};\n')
+iconListList.close()

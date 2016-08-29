@@ -1,4 +1,4 @@
-boxing.mods["boblogistics"] = {
+boxing.icons["boblogistics"] = {
 	["graphics/icons/flying-robot-frame-2.png"] = true,
 	["graphics/icons/flying-robot-frame-3.png"] = true,
 	["graphics/icons/flying-robot-frame-4.png"] = true,

@@ -2,14 +2,15 @@ for i,item in pairs(boxing.items) do
 	local icon = item.icon;
 	local mod = icon:sub(0, icon:find("/")-1);
 	mod = mod:sub(3, -3);
-	local i = 0;
-	while true do
-		i = icon:find("/");
-		if i == nil then
-			break;
-		end
-		icon = icon:sub(i+1);
+	icon = icon:sub(icon:find("/")+1);
+
+	local iconPath;
+	if boxing.icons[mod] and boxing.icons[mod][icon] then
+		iconPath = mod .. "/" .. icon;
+	else
+		iconPath = "unknown.png";
 	end
+
 	data:extend({
 		{
 			type = "item",
@@ -20,7 +21,7 @@ for i,item in pairs(boxing.items) do
 				{"item-name." .. item.name},
 			},
 			flags = {"goes-to-main-inventory"},
-			icon = "__boxing-2__/graphics/icons/box-of/wooden/" .. mod .. "/" .. icon,
+			icon = "__boxing-2__/graphics/icons/box-of/wooden/" .. iconPath,
 			subgroup = "boxing-wooden-" .. item.subgroup,
 			order = item.order,
 			stack_size = 5,
@@ -34,7 +35,7 @@ for i,item in pairs(boxing.items) do
 				{"item-name." .. item.name},
 			},
 			flags = {"goes-to-main-inventory"},
-			icon = "__boxing-2__/graphics/icons/box-of/steel/" .. mod .. "/" .. icon,
+			icon = "__boxing-2__/graphics/icons/box-of/steel/" .. iconPath,
 			subgroup = "boxing-steel-" .. item.subgroup,
 			order = item.order,
 			stack_size = 10,
@@ -51,7 +52,7 @@ for i,item in pairs(boxing.items) do
 					{"item-name." .. item.name},
 				},
 				flags = {"goes-to-main-inventory"},
-				icon = "__boxing-2__/graphics/icons/box-of/tungsten/" .. mod .. "/" .. icon,
+				icon = "__boxing-2__/graphics/icons/box-of/tungsten/" .. iconPath,
 				subgroup = "boxing-tungsten-" .. item.subgroup,
 				order = item.order,
 				stack_size = 20,

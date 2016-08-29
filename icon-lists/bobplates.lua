@@ -1,4 +1,4 @@
-boxing.mods["bobplates"] = {
+boxing.icons["bobplates"] = {
 	["graphics/icons/alien/alien-blue-alloy.png"] = true,
 	["graphics/icons/alien/alien-orange-alloy.png"] = true,
 	["graphics/icons/brass-gear-wheel.png"] = true,
