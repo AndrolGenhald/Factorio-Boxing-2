@@ -61,5 +61,6 @@ boxing.tungstenUnlocks = {
 	},
 };
 boxing.items = {};
+boxing.icons = {};
 
 boxing.generateIconConfig = false;

@@ -1,6 +1,6 @@
 {
 	"name": "boxing-2",
-	"version": "2.0.3",
+	"version": "2.0.4",
 	"title": "Boxing 2",
 	"author": "AndrolGenhald",
 	"description": "Pack items into boxes to store more of them.",
@@ -23,6 +23,10 @@
 		"? bobrevamp >= 0.13.0",
 		"? bobtech >= 0.13.0",
 		"? bobtechsave >= 0.13.0",
-		"? bobwarfare >= 0.13.0"
+		"? bobwarfare >= 0.13.0",
+		"? charcoal-preparate >= 0.0.2",
+		"? Bio_Industries >= 1.4.0",
+		"? Natural_Evolution_Buildings >= 6.3.0",
+		"? StickyNotes >= 1.0.3"
 	]
 }

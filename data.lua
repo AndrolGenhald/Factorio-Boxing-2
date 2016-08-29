@@ -50,6 +50,11 @@ if boxing.generateIconConfig then
 		});
 	end
 else
+	require("icon-lists");
+	for i, list in pairs(boxing["icon-lists"]) do
+		require(list:sub(0, -5));
+	end
+
 	require("prototypes.item.groups");
 	require("prototypes.recipe.categories");
 
