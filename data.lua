@@ -11,10 +11,16 @@ boxing.tungsten = data.raw.tool["science-pack-gold"]
 ;
 
 for i,item in pairs(data.raw.item) do
-	if boxing.subgroups[item.subgroup] or boxing.items[item.name] then
+	if boxing.itemSubgroups[item.subgroup] or boxing.itemNames[item.name] then
 		table.insert(boxing.items, item);
 	end
 end
+for i,item in pairs(data.raw["rail-planner"]) do
+	if boxing.itemSubgroups[item.subgroup] or boxing.itemNames[item.name] then
+		table.insert(boxing.items, item);
+	end
+end
+
 
 if boxing.generateIconConfig then
 	data:extend({
