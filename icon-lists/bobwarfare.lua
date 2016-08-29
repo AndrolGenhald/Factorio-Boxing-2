@@ -6,8 +6,5 @@ boxing.mods["bobwarfare"] = {
 	["graphics/icons/robot-brain-combat-4.png"] = true,
 	["graphics/icons/robot-brain-combat.png"] = true,
 	["graphics/icons/robot-tool-combat.png"] = true,
-	["graphics/icons/robot-tool-combat.png"] = true,
-	["graphics/icons/robot-tool-combat.png"] = true,
-	["graphics/icons/robot-tool-combat.png"] = true,
 	["graphics/icons/rocket-engine.png"] = true,
 };

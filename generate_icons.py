@@ -43,7 +43,7 @@ try:
 			elif not os.path.isdir(path):
 				os.mkdir(os.path.join(tmp, mod))
 			mods[mod] = path
-			iconLists[mod] = [];
+			iconLists[mod] = set();
 			print "Found mod " + mod + ": " + path
 		path = iconPath[iconPath.find('/')+1:]
 		if os.path.isdir(mods[mod]):
@@ -62,7 +62,7 @@ try:
 
 		iconDir = iconPath[iconPath.find('/')+1:iconPath.rfind('/')]
 		iconName = iconPath[iconPath.rfind('/')+1:]
-		iconLists[mod] += [iconDir + '/' + iconName]
+		iconLists[mod].add(iconDir + '/' + iconName)
 		itemIcon = Image.open(path)
 		itemIcon = itemIcon.resize((16,16), Image.BICUBIC)
 		itemIcon = itemIcon.convert('RGBA')
@@ -98,9 +98,18 @@ finally:
 	shutil.rmtree(tmp)
 
 for mod, icons in iconLists.items():
-	listFile = open(os.path.join('icon-lists', mod + '.lua'), 'w')
-	listFile.write('boxing.mods["' + mod + '"] = {\n')
+	if os.path.exists(os.path.join('icon-lists', mod)):
+		iconFile = open(os.path.join('icon-lists', mod), 'r')
+		oldIcons = set(eval(iconFile.read()))
+		iconFile.close()
+		icons |= oldIcons
+	icons = sorted(icons)
+	iconFile = open(os.path.join('icon-lists', mod), 'w')
+	iconFile.write(repr(icons))
+
+	luaFile = open(os.path.join('icon-lists', mod + '.lua'), 'w')
+	luaFile.write('boxing.mods["' + mod + '"] = {\n')
 	for icon in icons:
-		listFile.write('\t["' + icon + '"] = true,\n')
-	listFile.write('};\n')
-	listFile.close()
+		luaFile.write('\t["' + icon + '"] = true,\n')
+	luaFile.write('};\n')
+	luaFile.close()

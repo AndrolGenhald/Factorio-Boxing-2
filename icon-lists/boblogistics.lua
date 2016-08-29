@@ -11,11 +11,5 @@ boxing.mods["boblogistics"] = {
 	["graphics/icons/robot-brain-logistic-4.png"] = true,
 	["graphics/icons/robot-brain-logistic.png"] = true,
 	["graphics/icons/robot-tool-construction.png"] = true,
-	["graphics/icons/robot-tool-construction.png"] = true,
-	["graphics/icons/robot-tool-construction.png"] = true,
-	["graphics/icons/robot-tool-construction.png"] = true,
-	["graphics/icons/robot-tool-logistic.png"] = true,
-	["graphics/icons/robot-tool-logistic.png"] = true,
-	["graphics/icons/robot-tool-logistic.png"] = true,
 	["graphics/icons/robot-tool-logistic.png"] = true,
 };
