@@ -1,0 +1,15 @@
+boxing.mods["bobores"] = {
+	["graphics/icons/bauxite-ore.png"] = true,
+	["graphics/icons/cobalt-ore.png"] = true,
+	["graphics/icons/gold-ore.png"] = true,
+	["graphics/icons/iron-ore.png"] = true,
+	["graphics/icons/lead-ore.png"] = true,
+	["graphics/icons/nickel-ore.png"] = true,
+	["graphics/icons/quartz.png"] = true,
+	["graphics/icons/rutile-ore.png"] = true,
+	["graphics/icons/silver-ore.png"] = true,
+	["graphics/icons/stone.png"] = true,
+	["graphics/icons/tin-ore.png"] = true,
+	["graphics/icons/tungsten-ore.png"] = true,
+	["graphics/icons/zinc-ore.png"] = true,
+};
