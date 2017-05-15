@@ -1,5 +1,8 @@
 boxing = {};
 
+boxing.tungsten = true and data.raw.item["tungsten-plate"];
+
+--TODO make option
 --subgroups to allow boxing for
 boxing.itemSubgroups = {
 	["terrain"] = true,
@@ -42,25 +45,31 @@ for subgroup, i in pairs(boxing.itemSubgroups) do
 	boxing.subgroups[subgroup] = true;
 end
 
-boxing.woodenUnlocks = {
+--TODO make stack sizes option
+boxing.types = {
 	{
-		type = "unlock-recipe",
-		recipe = "wooden-box",
+		name = "wooden",
+		stack_size = 5,
+		box_ingredients = {{"wood", 4}},
 	},
-};
-boxing.steelUnlocks = {
 	{
-		type = "unlock-recipe",
-		recipe = "steel-box",
+		name = "steel",
+		stack_size = 10,
+		box_ingredients = {{"steel-plate", 2}},
 	},
-};
-boxing.tungstenUnlocks = {
-	{
-		type = "unlock-recipe",
-		recipe = "tungsten-box",
-	},
-};
-boxing.items = {};
-boxing.icons = {};
+}
 
-boxing.generateIconConfig = false;
+if (boxing.tungsten) then
+	table.insert(boxing.types, {
+		name = "tungsten",
+		stack_size = 20,
+		box_ingredients = {{"tungsten-plate", 2}},
+	});
+end
+
+boxing.unlocks = {}
+for i,type in pairs(boxing.types) do
+	boxing.unlocks[type.name] = {};
+end
+
+boxing.items = {};

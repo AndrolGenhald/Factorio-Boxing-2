@@ -21,7 +21,7 @@ for i, force in pairs(game.forces) do
 			end
 		end
 	end
-	if force.technologies["tungsten-boxing"].researched then
+	if force.technologies["tungsten-boxing"] and force.technologies["tungsten-boxing"].researched then
 		force.recipes["tungsten-box-rail"].enabled = true;
 		force.recipes["tungsten-unbox-rail"].enabled = true;
 		for j, recipe in pairs(force.recipes) do

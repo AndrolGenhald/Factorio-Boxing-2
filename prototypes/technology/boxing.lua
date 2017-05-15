@@ -10,11 +10,10 @@ data:extend({
 			ingredients = {
 				{"science-pack-1", 2},
 				{"science-pack-2", 2},
-				{"science-pack-3", 2},
 			},
 			time = 60,
 		},
-		effects = boxing.woodenUnlocks,
+		effects = boxing.unlocks["wooden"],
 	},
 	{
 		type = "technology",
@@ -29,11 +28,10 @@ data:extend({
 				{"science-pack-1", 2},
 				{"science-pack-2", 2},
 				{"science-pack-3", 2},
-				{"alien-science-pack", 2},
 			},
 			time = 90,
 		},
-		effects = boxing.steelUnlocks,
+		effects = boxing.unlocks["steel"],
 	},
 });
 
@@ -49,18 +47,14 @@ if boxing.tungsten then
 			unit = {
 				count = 300,
 				ingredients = {
-					{"science-pack-gold", 2},
-					{"alien-science-pack", 2},
-					{"alien-science-pack-blue", 2},
-					{"alien-science-pack-orange", 2},
-					{"alien-science-pack-purple", 2},
-					{"alien-science-pack-yellow", 2},
-					{"alien-science-pack-green", 2},
-					{"alien-science-pack-red", 2},
+					{"science-pack-1", 2},
+					{"science-pack-2", 2},
+					{"science-pack-3", 2},
+					{"high-tech-science-pack", 2},
 				},
 				time = 120,
 			},
-			effects = boxing.tungstenUnlocks,
+			effects = boxing.unlocks["tungsten"],
 		},
 	});
 end

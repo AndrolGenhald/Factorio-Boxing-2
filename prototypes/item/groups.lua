@@ -2,7 +2,8 @@ data:extend({
 	{
 		type = "item-group",
 		name = "boxing",
-		icon = "__boxing-2__/graphics/icons/box-64.png",
+		icon = "__boxing-2__/graphics/icons/box-128.png",
+		icon_size = 128,
 		order = "z[boxing]",
 	},
 	{
@@ -11,6 +12,7 @@ data:extend({
 		group = "boxing",
 		order = "a[boxes]",
 	},
+--TODO make option
 --Separate groups for each type
 --[[
 	{

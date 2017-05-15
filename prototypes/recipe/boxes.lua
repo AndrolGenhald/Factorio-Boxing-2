@@ -1,34 +1,15 @@
-data:extend({
-	{
-		type = "recipe",
-		name = "wooden-box",
-		ingredients = {
-			{"wood", 4},
-		},
-		result = "wooden-box",
-		enabled = "false",
-	},
-	{
-		type = "recipe",
-		name = "steel-box",
-		ingredients = {
-			{"steel-plate", 2},
-		},
-		result = "steel-box",
-		enabled = "false",
-	},
-});
-
-if boxing.tungsten then
+for i,type in pairs(boxing.types) do
 	data:extend({
 		{
 			type = "recipe",
-			name = "tungsten-box",
-			ingredients = {
-				{"tungsten-plate", 2},
-			},
-			result = "tungsten-box",
+			name = type.name .. "-box",
+			ingredients = type.box_ingredients,
+			result = type.name .. "-box",
 			enabled = "false",
 		},
+	});
+	table.insert(boxing.unlocks[type.name], {
+		type = "unlock-recipe",
+		recipe = type.name .. "-box",
 	});
 end
