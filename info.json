@@ -6,6 +6,6 @@
 	"description": "Pack items into boxes to store more of them.",
 	"factorio_version": "0.15",
 	"dependencies": [
-		"base >= 0.15.10",
+		"base >= 0.15.10"
 	]
 }
