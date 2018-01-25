@@ -23,26 +23,32 @@ for i,type in pairs(boxing.types) do
 				icons = flatten_icons_spec({
 					{
 						icon = "__boxing-2__/graphics/icons/" .. type.name .. "-back.png",
+						icon_size = 32
 					},
 					{
 						icon = icon,
+						icon_size = 32,
 						scale = 0.5,
 						shift = {5, -3},
 					},
 					{
 						icon = icon,
+						icon_size = 32,
 						scale = 0.5,
 						shift = {-3, -5},
 					},
 					{
 						icon = icon,
+						icon_size = 32,
 						scale = 0.5,
 						shift = {0, -8},
 					},
 					{
 						icon = "__boxing-2__/graphics/icons/" .. type.name .. "-front.png",
+						icon_size = 32,
 					},
 				}),
+				icon_size = 32,
 				subgroup = "boxing-" .. type.name .. "-" .. item.subgroup,
 				order = item.order,
 				stack_size = type.stack_size,

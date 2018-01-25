@@ -11,21 +11,25 @@ for i,type in pairs(boxing.types) do
 		local box_icons = flatten_icons_spec({
 			{
 				icon = "__boxing-2__/graphics/icons/" .. type.name .. "-back.png",
+				icon_size = 32,
 				scale = 0.75,
 				shift = {0, 4},
 			},
 			{
 				icon = icon,
+				icon_size = 32,
 				scale = 0.5,
 				shift = {0, -8},
 			},
 			{
 				icon = "__boxing-2__/graphics/icons/" .. type.name .. "-front.png",
+				icon_size = 32,
 				scale = 0.75,
 				shift = {0, 4},
 			},
 			{
 				icon = "__boxing-2__/graphics/icons/arrow-down.png",
+				icon_size = 32,
 			},
 		})
 		local unbox_icons = util.table.deepcopy(box_icons)
@@ -37,6 +41,7 @@ for i,type in pairs(boxing.types) do
 				name = type.name .. "-box-" .. item.name,
 				localised_name = {"recipe-name.box-*", {"item-name." .. item.name}},
 				icons = box_icons,
+				icon_size = 32,
 				energy_required = 2,
 				category = "boxing-" .. type.name,
 				subgroup = "boxing-" .. type.name .. "-" .. item.subgroup,
@@ -53,6 +58,7 @@ for i,type in pairs(boxing.types) do
 				name = type.name .. "-unbox-" .. item.name,
 				localised_name = {"recipe-name.unbox-*", {"item-name." .. item.name}},
 				icons = unbox_icons,
+				icon_size = 32,
 				energy_required = 2,
 				category = "boxing-" .. type.name,
 				subgroup = "unboxing-" .. type.name .. "-" .. item.subgroup,

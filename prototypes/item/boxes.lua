@@ -7,6 +7,7 @@ for i,type in pairs(boxing.types) do
 			name = type.name .. "-box",
 			flags = {"goes-to-main-inventory"},
 			icon = "__boxing-2__/graphics/icons/" .. type.name .. "-32.png",
+			icon_size = 32,
 			subgroup = "boxing-boxes",
 			order = letters:sub(i, i) .. "[" .. type.name .. "]",
 			stack_size = type.stack_size,
