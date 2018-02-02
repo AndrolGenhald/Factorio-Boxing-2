@@ -51,7 +51,8 @@ for i,type in pairs(boxing.types) do
 					{type.name .. "-box", 1},
 				},
 				result = type.name .. "-box-of-" .. item.name,
-				enabled = "false",
+				enabled = false,
+				allow_as_intermediate = false,
 			},
 			{
 				type = "recipe",
@@ -70,7 +71,8 @@ for i,type in pairs(boxing.types) do
 					{type="item", name=item.name, amount=item.stack_size},
 					{type="item", name=type.name .. "-box", amount=1},
 				},
-				enabled = "false",
+				enabled = false,
+				allow_as_intermediate = false,
 			},
 		});
 		table.insert(boxing.unlocks[type.name], {

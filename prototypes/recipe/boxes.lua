@@ -5,7 +5,7 @@ for i,type in pairs(boxing.types) do
 			name = type.name .. "-box",
 			ingredients = type.box_ingredients,
 			result = type.name .. "-box",
-			enabled = "false",
+			enabled = false,
 		},
 	});
 	table.insert(boxing.unlocks[type.name], {
