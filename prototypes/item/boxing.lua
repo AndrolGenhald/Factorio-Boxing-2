@@ -19,7 +19,6 @@ for i,type in pairs(boxing.types) do
 					{"item-name." .. type.name .. "-box"},
 					{"item-name." .. item.name},
 				},
-				flags = {"goes-to-main-inventory"},
 				icons = flatten_icons_spec({
 					{
 						icon = "__boxing-2__/graphics/icons/" .. type.name .. "-back.png",

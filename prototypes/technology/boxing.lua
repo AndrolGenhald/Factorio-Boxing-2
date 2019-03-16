@@ -8,8 +8,8 @@ data:extend({
 		unit = {
 			count = 100,
 			ingredients = {
-				{"science-pack-1", 2},
-				{"science-pack-2", 2},
+				{"automation-science-pack", 2},
+				{"logistic-science-pack", 2},
 			},
 			time = 60,
 		},
@@ -25,9 +25,9 @@ data:extend({
 		unit = {
 			count = 200,
 			ingredients = {
-				{"science-pack-1", 2},
-				{"science-pack-2", 2},
-				{"science-pack-3", 2},
+				{"automation-science-pack", 2},
+				{"logistic-science-pack", 2},
+				{"chemical-science-pack", 2},
 			},
 			time = 90,
 		},
@@ -47,9 +47,9 @@ if boxing.tungsten then
 			unit = {
 				count = 300,
 				ingredients = {
-					{"science-pack-1", 2},
-					{"science-pack-2", 2},
-					{"science-pack-3", 2},
+					{"automation-science-pack", 2},
+					{"logistic-science-pack", 2},
+					{"chemical-science-pack", 2},
 					{"high-tech-science-pack", 2},
 				},
 				time = 120,
