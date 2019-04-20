@@ -50,7 +50,7 @@ if boxing.tungsten then
 					{"automation-science-pack", 2},
 					{"logistic-science-pack", 2},
 					{"chemical-science-pack", 2},
-					{"high-tech-science-pack", 2},
+					{"utility-science-pack", 2},
 				},
 				time = 120,
 			},
