@@ -14,5 +14,5 @@ for i,type in pairs(boxing.types) do
 end
 
 if settings.startup["player-craftable-wooden-boxing"].value then
-	table.insert(data.raw.player.player.crafting_categories, "boxing-wooden")
+	table.insert(data.raw.character.character.crafting_categories, "boxing-wooden")
 end
