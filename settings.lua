@@ -4,6 +4,11 @@ data:extend({
 		name = "player-craftable-wooden-boxing",
 		setting_type = "startup",
 		default_value = true,
-		per_user = false,
+	},
+	{
+		type = "int-setting",
+		name = "empty-box-multiplier",
+		setting_type = "startup",
+		default_value = 1,
 	},
 })

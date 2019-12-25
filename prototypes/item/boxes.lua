@@ -9,7 +9,7 @@ for i,type in pairs(boxing.types) do
 			icon_size = 32,
 			subgroup = "boxing-boxes",
 			order = letters:sub(i, i) .. "[" .. type.name .. "]",
-			stack_size = type.stack_size,
+			stack_size = type.stack_size * settings.startup["empty-box-multiplier"].value,
 		},
 	});
 end
