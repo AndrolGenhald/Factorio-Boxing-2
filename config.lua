@@ -37,14 +37,6 @@ boxing.itemNames = {
 	["rail"] = true,
 };
 
---boxing subgroups to create (for sorting items)
-boxing.subgroups = {
-	["transport"] = true,
-};
-for subgroup, i in pairs(boxing.itemSubgroups) do
-	boxing.subgroups[subgroup] = true;
-end
-
 --TODO make stack sizes option
 boxing.types = {
 	{
@@ -73,3 +65,4 @@ for i,type in pairs(boxing.types) do
 end
 
 boxing.items = {};
+boxing.subgroups = {};
